@@ -33,21 +33,19 @@ public class ForLoopsTests {
         assertEquals(expected, actual);
     }
 
-//    @Test
-//    void sumNumbersLargestFirst() {
-//      int expected = 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20;
-//      int actual = ForLoops.sumNumbers(20, 11);
-//      assertEquals(expected, actual);
-//    }
-//
-//    @Test
-//    void sumNumbersSmallestFirst() {
-//        int expected = 78 + 79 + 80 + 81 + 82 + 83 + 84 + 85;
-//        int actual = ForLoops.sumNumbers(78, 85);
-//        assertEquals(expected, actual);
-//    }
-//
-//    @Test
+    @Test
+   void sumNumbersLargestFirst() {
+      int expected = 11 + 12 + 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20;
+      int actual = ForLoops.sumNumbers(20, 11);
+      assertEquals(expected, actual);
+    }
+
+   @Test    void sumNumbersSmallestFirst() {        int expected = 78 + 79 + 80 + 81 + 82 + 83 + 84 + 85;
+        int actual = ForLoops.sumNumbers(78, 85);
+        assertEquals(expected, actual);
+    }
+
+ //   @Test
 //    void powerPositive() {
 //        int expected = 625;
 //        int actual = ForLoops.power(5, 6);

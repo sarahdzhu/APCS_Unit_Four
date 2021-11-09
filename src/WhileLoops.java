@@ -2,17 +2,21 @@ import java.util.Scanner;
 
 public class WhileLoops {
 
-    /**
-     * Usage examples:
-     * fromHereToThere(20, 30) -> “20 21 22 23 24 25 26 27 28 29 30”
-     * fromHereToThere(30, 20) -> “Invalid input”
-     * @param num1 - The starting number
-     * @param num2 - The ending number
-     * @return A string consisting of either the range of numbers or Invalid Input
-     */
+    static Scanner scan = new Scanner(System.in);
     public static String fromHereToThere(int num1, int num2) {
+        String nums = " ";
 
-        return ""; // update or remove this line. It is only there so the tests do not show an error.
+        if (num1 < num2) {
+            while (num1 <= num2) {
+                nums += num1 + " ";
+                num1++;
+            }
+        } else {
+
+            return "Invalid input";
+
+        }
+            return nums;
     }
 
     /**
@@ -21,10 +25,29 @@ public class WhileLoops {
      * @return - A string showing how many positive and negative numbers were entered by the user.
      */
     public static String countPosAndNeg() {
+        int number = scan.nextInt();
+        String input = "Enter a positive or negative number or 0 to quit: ";
+        int pos = 0;
+        int neg = 0;
+        while (number != 0) {
+            if (number > 0) {
+                pos++;
+                return " ";
+            } else if (number < 0) {
+                neg++;
+                return " ";
+            } else {
+                return input;
+            }
 
-        return ""; // update or remove this line. It is only there so the tests do not show an error.
+        }
+        if (number == 0) {
+            return "There were " + pos + "positive and " + neg + "negative numbers";
+
+
+        }
+        return "";
     }
-
     /**
      * Allow the user to enter 5 whole numbers (can be positive or negative). Keep track
      * of the largest and the smallest.
